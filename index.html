@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ironsurge Group | Junk Removal, Cleanouts &amp; Hauling in Wilmington, NC</title>
 <meta name="description" content="Junk removal, garage and shed cleanouts, and hauling in Wilmington, NC. Also handyman work, yard cleanups, and boat and auto detailing. Text (704) 560-6294 for a fast, upfront quote.">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -80,27 +77,16 @@ a{color:inherit}
 .g-tall{grid-row:span 2}
 .sub{font-family:'Libre Baskerville',Georgia,serif;font-size:24px;margin:0 0 20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .g-wide{grid-column:span 2}
-.gallery figure{cursor:zoom-in}
-.gallery video{width:100%;height:100%;object-fit:cover;display:block}
-.gallery[hidden]{display:none}
-.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
-.tab{font:inherit;font-size:15px;font-weight:600;padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.tab:hover{border-color:var(--gold)}
-.tab.on{background:var(--black);border-color:var(--black);color:#fff}
-.hint{margin:18px 0 0;font-size:14px;color:var(--muted)}
-.lb{position:fixed;inset:0;z-index:100;background:rgba(5,5,5,.94);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 72px}
-.lb.open{display:flex}
-.lb img,.lb video{max-width:100%;max-height:calc(100vh - 150px);object-fit:contain;border-radius:4px}
-.lb p{color:#ddd;margin:16px 0 0;font-size:15px;text-align:center}
-.lb button{position:absolute;background:rgba(255,255,255,.1);border:0;color:#fff;width:52px;height:52px;border-radius:50%;font-size:28px;line-height:1;cursor:pointer}
-.lb button:hover{background:rgba(255,255,255,.22)}
-.lb .x{top:18px;right:18px}
-.lb .prev{left:14px;top:50%;transform:translateY(-50%)}
-.lb .next{right:14px;top:50%;transform:translateY(-50%)}
-.lb .count{position:absolute;top:30px;left:24px;margin:0;color:#999;font-size:14px}
-@media (max-width:640px){.lb{padding:70px 12px}.lb .prev,.lb .next{top:auto;bottom:18px;transform:none}.tab{flex:1 1 auto;padding:11px 14px;font-size:14px}}
 
+.also{margin-top:44px;border-top:1px solid var(--line);padding-top:28px}
+.also-h{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:16px}
+.also-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.also-i{display:flex;gap:16px;align-items:center;background:#fff;border-radius:4px;padding:12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.also-i img{width:96px;height:72px;object-fit:cover;border-radius:3px;flex:none}
+.also-i b{display:block;font-size:16px;margin-bottom:4px}
+.also-i span{display:block;font-size:14px;color:var(--muted);line-height:1.5}
+.gallery.mini{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:170px;gap:12px}
+.gallery.mini figcaption{font-size:12px;padding:30px 10px 10px}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
 .about img{width:100%;height:560px;object-fit:cover;border-radius:4px}
@@ -120,9 +106,11 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
 
 @media (max-width:960px){
   .cards{grid-template-columns:1fr}
-  .gallery,.g3{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px}
   .about{grid-template-columns:1fr;gap:40px}
   .about img{height:420px}
+  .also-row{grid-template-columns:1fr}
+  .gallery.mini{grid-template-columns:repeat(3,minmax(0,1fr))}
   .nav a.link{display:none}
 }
 @media (max-width:640px){
@@ -141,7 +129,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
   .stat,.stat:first-child{padding:28px 0;border-left:0;border-top:1px solid #262626}
   .stat:first-child{border-top:0}
   .stat b{font-size:32px}
-  .gallery,.g3{grid-template-columns:1fr;grid-auto-rows:260px}
+  .gallery{grid-template-columns:1fr;grid-auto-rows:260px}
+  .gallery.mini{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}
   .g-tall{grid-row:span 1}.g-wide{grid-column:span 1}
   .cta .btn{flex:1 1 100%}
 }
@@ -166,7 +155,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
   <div class="wrap">
     <div class="eyebrow">Wilmington, North Carolina</div>
     <h1>Junk Removal, Cleanouts &amp; Hauling</h1>
-    <p>Plus handyman work, yard cleanups, and boat and auto detailing. Fast, upfront quotes from the owner.</p>
+    <p>Furniture, appliances, cleanouts, and yard debris hauled away. Fast, upfront quotes from the owner.</p>
     <div class="actions">
       <a class="btn btn-gold" href="sms:7045606294">Text for a Free Quote</a>
       <a class="btn btn-line" href="#services">Our Services</a>
@@ -184,50 +173,57 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
     </div>
     <div class="cards">
       <article class="card">
-        <img src="haul-truck.jpg" alt="Ironsurge Group truck and utility trailer" style="object-position:center 62%">
+        <img src="fridge-haul-4.jpg" alt="Old refrigerator and freezer loaded on the Ironsurge truck and trailer" style="object-position:center 60%">
         <div class="body">
-          <h3>Hauling &amp; Cleanouts</h3>
+          <h3>Junk &amp; Appliance Removal</h3>
           <ul>
-            <li>Junk &amp; furniture removal</li>
-            <li>Garage &amp; shed cleanouts</li>
-            <li>Yard work &amp; brush removal</li>
+            <li>Old furniture &amp; mattresses</li>
+            <li>Fridges, freezers &amp; appliances</li>
+            <li>General household junk</li>
+            <li>Renovation debris</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="cleanout.jpg" alt="Bagged debris from a heavy cleanout" style="object-position:center 30%">
+        <div class="body">
+          <h3>Cleanouts</h3>
+          <ul>
+            <li>Garages &amp; sheds</li>
+            <li>Apartments &amp; move outs</li>
+            <li>Estate &amp; rental cleanouts</li>
+            <li>Swept out when we leave</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card">
+        <img src="teardown-after.jpg" alt="Clean slab after a carport teardown and haul away" style="object-position:center 70%">
+        <div class="body">
+          <h3>Yard Debris &amp; Hauling</h3>
+          <ul>
+            <li>Brush &amp; storm debris</li>
+            <li>Small teardowns &amp; haul away</li>
+            <li>Dump runs</li>
             <li>Moving &amp; heavy lifting</li>
           </ul>
         </div>
       </article>
-      <article class="card">
-        <img src="trim-install.jpg" alt="Measuring window trim during a finish carpentry job" style="object-position:center 55%">
-        <div class="body">
-          <h3>Handyman &amp; Assembly</h3>
-          <ul>
-            <li>Small home repairs</li>
-            <li>Shelves, fixtures &amp; mounting</li>
-            <li>Furniture assembly</li>
-            <li>Trim &amp; finish carpentry</li>
-          </ul>
-        </div>
-      </article>
-      <article class="card">
-        <img src="buffing.jpg" alt="Jack machine polishing the hood of a car" style="object-position:12% 40%">
-        <div class="body">
-          <h3>Boat &amp; Auto Detailing</h3>
-          <ul>
-            <li>Boat wash, interior &amp; upholstery</li>
-            <li>Auto exterior wash &amp; polish</li>
-            <li>Buffing &amp; paint correction</li>
-            <li>Center consoles to yachts</li>
-          </ul>
-        </div>
-      </article>
+    </div>
+    <div class="also">
+      <div class="also-h">Also available</div>
+      <div class="also-row">
+        <div class="also-i"><img src="trim-install.jpg" alt="" style="object-position:center 55%"><div><b>Light handyman</b><span>Small repairs, mounting, furniture assembly, trim work</span></div></div>
+        <div class="also-i"><img src="boat-azimut.jpg" alt="" style="object-position:center 55%"><div><b>Boat &amp; auto detailing</b><span>Washes, polish and buffing. Two years and 1,000+ hours on boats and yachts</span></div></div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap">
-    <div class="stat"><b>Family trade</b><span>Grew up building with my dad</span></div>
-    <div class="stat"><b>1,000+</b><span>Hours detailing boats and yachts</span></div>
-    <div class="stat"><b>Eagle Scout</b><span>Owner operated by Jack McMillan</span></div>
+    <div class="stat"><b>Free quotes</b><span>Text a few photos, get a clear price</span></div>
+    <div class="stat"><b>Truck &amp; trailer</b><span>Loaded, strapped and hauled off</span></div>
+    <div class="stat"><b>Owner operated</b><span>You deal directly with me</span></div>
   </div>
 </section>
 
@@ -240,32 +236,23 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
       </div>
       <a class="btn btn-dark" href="sms:7045606294">Start Your Project</a>
     </div>
-    <div class="tabs" role="tablist">
-      <button class="tab on" data-tab="haul" role="tab">Hauling &amp; Cleanouts</button>
-      <button class="tab" data-tab="build" role="tab">Building &amp; Handyman</button>
-      <button class="tab" data-tab="detail" role="tab">Detailing</button>
+    <h3 class="sub">Junk Removal &amp; Hauling</h3>
+    <div class="gallery">
+      <figure class="g-wide g-tall"><img src="fridge-haul-2.jpg" alt="Refrigerator and freezer loaded for haul away" style="object-position:center 55%"><figcaption>Fridge &amp; freezer removal</figcaption></figure>
+      <figure class="g-tall"><img src="julie-haul.jpg" alt="Truck and trailer loaded with box springs and furniture" style="object-position:center 60%"><figcaption>Furniture &amp; mattress haul</figcaption></figure>
+      <figure class="g-tall"><img src="cleanout.jpg" alt="Bagged debris from a heavy cleanout" style="object-position:center 30%"><figcaption>Heavy cleanout · Bagged &amp; hauled</figcaption></figure>
+      <figure class="g-wide"><img src="teardown-before.jpg" alt="Timber carport before teardown" style="object-position:center 55%"><figcaption>Carport teardown · Before</figcaption></figure>
+      <figure class="g-wide"><img src="teardown-after.jpg" alt="Clean slab after teardown" style="object-position:center 70%"><figcaption>Carport teardown · After</figcaption></figure>
     </div>
-    <div class="gallery" data-panel="haul">
-      <figure class="g-wide g-tall"><img src="haul-trailer.jpg" alt="Truck and trailer loaded with a mattress and furniture for haul off" style="object-position:center 62%"><figcaption>Furniture &amp; mattress haul off</figcaption></figure>
-      <figure class="g-wide g-tall"><img src="cleanout.jpg" alt="Bagged debris from a heavy cleanout" style="object-position:center 30%"><figcaption>Heavy cleanout · Bagged &amp; hauled</figcaption></figure>
+    <h3 class="sub" style="margin-top:56px">Handyman &amp; Detailing</h3>
+    <div class="gallery mini">
+      <figure><img src="trim-saw.jpg" alt="Cutting window trim on a miter saw" style="object-position:center 42%"><figcaption>Window trim</figcaption></figure>
+      <figure><img src="slat-screen.jpg" alt="Wood slat screen on steel posts" style="object-position:center 35%"><figcaption>Slat screen</figcaption></figure>
+      <figure><img src="fender-after.jpg" alt="Restored trailer fender" style="object-position:62% center"><figcaption>Fender restoration</figcaption></figure>
+      <figure ><video src="reflection.mp4" poster="reflection-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video of a black truck's polished paint reflecting the yard like a mirror" style="width:100%;height:100%;object-fit:cover;display:block"></video><figcaption>Mirror finish</figcaption></figure>
+      <figure><img src="boat-scout-interior.jpg" alt="Clean boat interior"><figcaption>Boat interior</figcaption></figure>
+      <figure><img src="tailgate-after.jpg" alt="Finished tailgate lettering" style="object-position:center 50%"><figcaption>Tailgate lettering</figcaption></figure>
     </div>
-    <div class="gallery" data-panel="build" hidden>
-      <figure class="g-wide g-tall"><img src="barn-before.jpg" alt="Bare concrete slab before a pole barn was built" style="object-position:center 70%"><figcaption>Pole barn build · Before</figcaption></figure>
-      <figure class="g-wide g-tall"><img src="barn-after.jpg" alt="Finished timber frame pole barn with a metal roof" style="object-position:center 55%"><figcaption>Pole barn build · After</figcaption></figure>
-      <figure class="g-wide"><img src="trim-saw.jpg" alt="Cutting trim on a miter saw at a job site" style="object-position:center 42%"><figcaption>Cutting window trim on site</figcaption></figure>
-      <figure class="g-wide"><img src="slat-screen.jpg" alt="Horizontal wood slat screen on steel posts" style="object-position:center 35%"><figcaption>Slat screen on steel posts</figcaption></figure>
-      <figure class="g-wide"><img src="pit-framing.jpg" alt="Gaga ball pit during layout and framing" style="object-position:center 60%"><figcaption>Gaga ball pit · Start</figcaption></figure>
-      <figure class="g-wide"><img src="pit-finished.jpg" alt="Completed gaga ball pit filled with sand"><figcaption>Gaga ball pit · Finished</figcaption></figure>
-    </div>
-    <div class="gallery g3" data-panel="detail" hidden>
-      <figure class="g-tall"><video src="reflection.mp4" poster="reflection-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video of a black truck's polished paint reflecting the yard like a mirror"></video><figcaption>Mirror finish</figcaption></figure>
-      <figure class="g-tall"><video src="paint-correction.mp4" poster="paint-correction-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video of truck paint before and after buffing"></video><figcaption>Buffing the truck</figcaption></figure>
-      <figure class="g-tall"><img src="buffing.jpg" alt="Jack buffing the hood of a blue sedan with a polisher" style="object-position:12% 40%"><figcaption>Machine polishing</figcaption></figure>
-      <figure class="g-tall"><img src="hood-polished.jpg" alt="Polished blue hood with crisp light reflections" style="object-position:center 55%"><figcaption>Polished finish</figcaption></figure>
-      <figure class="g-tall"><img src="tailgate-masking.jpg" alt="Tailgate masked around each letter for paint work" style="object-position:center 55%"><figcaption>Tailgate lettering · Masked</figcaption></figure>
-      <figure class="g-tall"><img src="tailgate-after.jpg" alt="Finished tailgate with crisp black CHEVROLET lettering" style="object-position:center 50%"><figcaption>Tailgate lettering · Finished</figcaption></figure>
-    </div>
-    <p class="hint">Tap any photo to see it full size.</p>
   </div>
 </section>
 
@@ -274,7 +261,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
     <div>
       <div class="eyebrow">About</div>
       <h2>Local, owner operated, and built on real experience.</h2>
-      <p>I'm Jack McMillan. I grew up working residential construction with my dad at McMillan Builders and have spent the past two years detailing boats and yachts in Wilmington.</p>
+      <p>I'm Jack McMillan. I grew up helping my dad on residential construction jobs, and I have my own truck, trailer, and tools to get your junk hauled off fast.</p>
       <p>When you reach out to Ironsurge Group, you talk directly with me, get a clear price before any work starts, and I show up to do the job myself.</p>
       <div class="actions" style="margin-top:30px;justify-content:center">
         <a class="btn btn-dark" href="tel:7045606294">Call (704) 560-6294</a>
@@ -307,47 +294,6 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
     <span>© 2026 Ironsurge Group LLC</span>
   </div>
 </footer>
-
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
-  <p class="count" id="lbCount"></p>
-  <button class="x" id="lbX" aria-label="Close">&times;</button>
-  <button class="prev" id="lbPrev" aria-label="Previous">&#8249;</button>
-  <div id="lbMedia"></div>
-  <p id="lbCap"></p>
-  <button class="next" id="lbNext" aria-label="Next">&#8250;</button>
-</div>
-
-<script>
-(function(){
-  var tabs=document.querySelectorAll('.tab'),panels=document.querySelectorAll('[data-panel]');
-  tabs.forEach(function(t){t.addEventListener('click',function(){
-    tabs.forEach(function(x){x.classList.toggle('on',x===t)});
-    panels.forEach(function(p){p.hidden=p.dataset.panel!==t.dataset.tab});
-  })});
-  var lb=document.getElementById('lb'),media=document.getElementById('lbMedia'),cap=document.getElementById('lbCap'),cnt=document.getElementById('lbCount'),list=[],i=0,sx=null;
-  function show(){
-    var f=list[i],src=f.querySelector('img,video'),el;
-    if(src.tagName==='VIDEO'){el=document.createElement('video');el.src=src.getAttribute('src');el.controls=true;el.autoplay=true;el.muted=true;el.loop=true;el.playsInline=true}
-    else{el=document.createElement('img');el.src=src.getAttribute('src');el.alt=src.alt}
-    media.innerHTML='';media.appendChild(el);
-    cap.textContent=f.querySelector('figcaption').textContent;
-    cnt.textContent=(i+1)+' / '+list.length;
-  }
-  function go(d){i=(i+d+list.length)%list.length;show()}
-  function close(){lb.classList.remove('open');media.innerHTML='';document.body.style.overflow=''}
-  document.querySelectorAll('.gallery figure').forEach(function(f){f.addEventListener('click',function(){
-    list=Array.prototype.slice.call(f.parentNode.querySelectorAll('figure'));i=list.indexOf(f);
-    show();lb.classList.add('open');document.body.style.overflow='hidden';
-  })});
-  document.getElementById('lbX').onclick=close;
-  document.getElementById('lbPrev').onclick=function(){go(-1)};
-  document.getElementById('lbNext').onclick=function(){go(1)};
-  lb.addEventListener('click',function(e){if(e.target===lb)close()});
-  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
-  lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});
-  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)go(dx<0?1:-1);sx=null});
-})();
-</script>
 
 </body>
 </html>
