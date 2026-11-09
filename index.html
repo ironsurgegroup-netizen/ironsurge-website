@@ -87,6 +87,29 @@ a{color:inherit}
 .also-i span{display:block;font-size:14px;color:var(--muted);line-height:1.5}
 .gallery.mini{grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:170px;gap:12px}
 .gallery.mini figcaption{font-size:12px;padding:30px 10px 10px}
+a.card{display:block;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+a.card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 18px 40px rgba(0,0,0,.1)}
+.more{display:inline-block;margin-top:20px;font-size:14px;font-weight:600;color:var(--gold-dark)}
+a.also-i{text-decoration:none;color:inherit;transition:box-shadow .2s}
+a.also-i:hover{box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.sub-hero{position:relative;min-height:420px;display:flex;align-items:flex-end;color:#fff;background:#111}
+.sub-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sub-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,0) 25%),linear-gradient(90deg,rgba(8,8,8,.88),rgba(8,8,8,.45))}
+.sub-hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:56px}
+.sub-hero h1{font-family:'Libre Baskerville',Georgia,serif;font-size:48px;line-height:1.1;margin:14px 0 14px}
+.sub-hero p{font-size:18px;line-height:1.6;color:rgba(255,255,255,.88);max-width:620px;margin:0}
+.sub-hero .eyebrow{color:var(--gold)}
+.sub-hero .back{color:rgba(255,255,255,.8);text-decoration:none;font-size:14px}
+.blk{padding:72px 0 0}
+.blk h2{font-family:'Libre Baskerville',Georgia,serif;font-size:32px;margin:12px 0 12px}
+.blk .lead{font-size:17px;line-height:1.7;color:var(--muted);max-width:720px;margin:0 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.chips span{font-size:14px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.nav-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:72px 0 96px}
+.nav-links a{display:block;padding:22px 24px;background:#fff;border-radius:4px;text-decoration:none;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.nav-links a b{display:block;font-family:'Libre Baskerville',Georgia,serif;font-size:19px;margin-bottom:4px}
+.nav-links a span{font-size:14px;color:var(--gold-dark);font-weight:600}
+@media (max-width:640px){.sub-hero h1{font-size:34px}.sub-hero{min-height:360px}.nav-links{grid-template-columns:1fr}.blk h2{font-size:26px}}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:72px;align-items:center}
 .about img{width:100%;height:560px;object-fit:cover;border-radius:4px}
@@ -143,7 +166,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
     <a class="logo" href="#"><b>IRONSURGE</b><i></i><span>GROUP LLC</span></a>
     <nav class="nav">
       <a class="link" href="#services">Services</a>
-      <a class="link" href="#work">Our Work</a>
+      <a class="link" href="#work">Recent Work</a>
       <a class="link" href="#about">About</a>
       <a class="btn btn-gold" href="tel:7045606294">(704) 560-6294</a>
     </nav>
@@ -158,7 +181,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
     <p>Furniture, appliances, cleanouts, and yard debris hauled away. Fast, upfront quotes from the owner.</p>
     <div class="actions">
       <a class="btn btn-gold" href="sms:7045606294">Text for a Free Quote</a>
-      <a class="btn btn-line" href="#services">Our Services</a>
+      <a class="btn btn-line" href="#services">View Services</a>
     </div>
   </div>
 </section>
@@ -167,12 +190,12 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
   <div class="wrap">
     <div class="head">
       <div>
-        <div class="eyebrow">What We Do</div>
+        <div class="eyebrow">Services</div>
         <h2>Services</h2>
       </div>
     </div>
     <div class="cards">
-      <article class="card">
+      <a class="card" href="junk-removal.html#appliances">
         <img src="fridge-haul-4.jpg" alt="Old refrigerator and freezer loaded on the Ironsurge truck and trailer" style="object-position:center 60%">
         <div class="body">
           <h3>Junk &amp; Appliance Removal</h3>
@@ -182,9 +205,10 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
             <li>General household junk</li>
             <li>Renovation debris</li>
           </ul>
+          <span class="more">See photos &rarr;</span>
         </div>
-      </article>
-      <article class="card">
+      </a>
+      <a class="card" href="junk-removal.html#cleanouts">
         <img src="cleanout.jpg" alt="Bagged debris from a heavy cleanout" style="object-position:center 30%">
         <div class="body">
           <h3>Cleanouts</h3>
@@ -192,11 +216,12 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
             <li>Garages &amp; sheds</li>
             <li>Apartments &amp; move outs</li>
             <li>Estate &amp; rental cleanouts</li>
-            <li>Swept out when we leave</li>
+            <li>Swept clean when finished</li>
           </ul>
+          <span class="more">See photos &rarr;</span>
         </div>
-      </article>
-      <article class="card">
+      </a>
+      <a class="card" href="junk-removal.html#yard">
         <img src="teardown-after.jpg" alt="Clean slab after a carport teardown and haul away" style="object-position:center 70%">
         <div class="body">
           <h3>Yard Debris &amp; Hauling</h3>
@@ -206,14 +231,15 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
             <li>Dump runs</li>
             <li>Moving &amp; heavy lifting</li>
           </ul>
+          <span class="more">See photos &rarr;</span>
         </div>
-      </article>
+      </a>
     </div>
     <div class="also">
       <div class="also-h">Also available</div>
       <div class="also-row">
-        <div class="also-i"><img src="trim-install.jpg" alt="" style="object-position:center 55%"><div><b>Light handyman</b><span>Small repairs, mounting, furniture assembly, trim work</span></div></div>
-        <div class="also-i"><img src="boat-azimut.jpg" alt="" style="object-position:center 55%"><div><b>Boat &amp; auto detailing</b><span>Washes, polish and buffing. Two years and 1,000+ hours on boats and yachts</span></div></div>
+        <a class="also-i" href="handyman.html"><img src="trim-install.jpg" alt="" style="object-position:center 55%"><div><b>Light handyman</b><span>Small repairs, mounting, furniture assembly, trim work</span></div></a>
+        <a class="also-i" href="detailing.html"><img src="buffing.jpg" alt="" style="object-position:12% 40%"><div><b>Boat &amp; auto detailing</b><span>Exterior washes, polish and buffing. 1,000+ hours of detailing experience</span></div></a>
       </div>
     </div>
   </div>
@@ -223,7 +249,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
   <div class="wrap">
     <div class="stat"><b>Free quotes</b><span>Text a few photos, get a clear price</span></div>
     <div class="stat"><b>Truck &amp; trailer</b><span>Loaded, strapped and hauled off</span></div>
-    <div class="stat"><b>Owner operated</b><span>You deal directly with me</span></div>
+    <div class="stat"><b>Owner operated</b><span>Deal directly with the owner</span></div>
   </div>
 </section>
 
@@ -236,22 +262,13 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
       </div>
       <a class="btn btn-dark" href="sms:7045606294">Start Your Project</a>
     </div>
-    <h3 class="sub">Junk Removal &amp; Hauling</h3>
+    <h3 class="sub">Junk Removal &amp; Hauling &nbsp;<a href="junk-removal.html" style="font-family:Inter,sans-serif;font-size:14px;color:var(--gold-dark);text-decoration:none">See all &rarr;</a></h3>
     <div class="gallery">
       <figure class="g-wide g-tall"><img src="fridge-haul-2.jpg" alt="Refrigerator and freezer loaded for haul away" style="object-position:center 55%"><figcaption>Fridge &amp; freezer removal</figcaption></figure>
       <figure class="g-tall"><img src="julie-haul.jpg" alt="Truck and trailer loaded with box springs and furniture" style="object-position:center 60%"><figcaption>Furniture &amp; mattress haul</figcaption></figure>
       <figure class="g-tall"><img src="cleanout.jpg" alt="Bagged debris from a heavy cleanout" style="object-position:center 30%"><figcaption>Heavy cleanout · Bagged &amp; hauled</figcaption></figure>
       <figure class="g-wide"><img src="teardown-before.jpg" alt="Timber carport before teardown" style="object-position:center 55%"><figcaption>Carport teardown · Before</figcaption></figure>
       <figure class="g-wide"><img src="teardown-after.jpg" alt="Clean slab after teardown" style="object-position:center 70%"><figcaption>Carport teardown · After</figcaption></figure>
-    </div>
-    <h3 class="sub" style="margin-top:56px">Handyman &amp; Detailing</h3>
-    <div class="gallery mini">
-      <figure><img src="trim-saw.jpg" alt="Cutting window trim on a miter saw" style="object-position:center 42%"><figcaption>Window trim</figcaption></figure>
-      <figure><img src="slat-screen.jpg" alt="Wood slat screen on steel posts" style="object-position:center 35%"><figcaption>Slat screen</figcaption></figure>
-      <figure><img src="fender-after.jpg" alt="Restored trailer fender" style="object-position:62% center"><figcaption>Fender restoration</figcaption></figure>
-      <figure ><video src="reflection.mp4" poster="reflection-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Video of a black truck's polished paint reflecting the yard like a mirror" style="width:100%;height:100%;object-fit:cover;display:block"></video><figcaption>Mirror finish</figcaption></figure>
-      <figure><img src="boat-scout-interior.jpg" alt="Clean boat interior"><figcaption>Boat interior</figcaption></figure>
-      <figure><img src="tailgate-after.jpg" alt="Finished tailgate lettering" style="object-position:center 50%"><figcaption>Tailgate lettering</figcaption></figure>
     </div>
   </div>
 </section>
@@ -261,8 +278,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:28px}
     <div>
       <div class="eyebrow">About</div>
       <h2>Local, owner operated, and built on real experience.</h2>
-      <p>I'm Jack McMillan. I grew up helping my dad on residential construction jobs, and I have my own truck, trailer, and tools to get your junk hauled off fast.</p>
-      <p>When you reach out to Ironsurge Group, you talk directly with me, get a clear price before any work starts, and I show up to do the job myself.</p>
+      <p>Ironsurge Group is owned and operated by Jack McMillan, a UNCW student who grew up helping his dad on residential construction jobs. With a truck, trailer, and tools ready to go, junk gets hauled off fast.</p>
+      <p>Every customer deals directly with the owner, gets a clear price before any work starts, and gets the job done by the same person they talked to.</p>
       <div class="actions" style="margin-top:30px;justify-content:center">
         <a class="btn btn-dark" href="tel:7045606294">Call (704) 560-6294</a>
       </div>
